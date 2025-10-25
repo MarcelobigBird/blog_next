@@ -400,6 +400,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@netlify/plugin-nextjs@npm:^5.14.3":
+  version: 5.14.3
+  resolution: "@netlify/plugin-nextjs@npm:5.14.3"
+  checksum: 10c0/4724524b64fb986a8115f9f1bece4cb4a9ef62059a3de14784e6e3cf185c292c31aea786d1db9db719b61c904c6fa1ba2660a0d0525886c18084fe8a27ac610c
+  languageName: node
+  linkType: hard
+
 "@next/env@npm:14.2.33":
   version: 14.2.33
   resolution: "@next/env@npm:14.2.33"
@@ -663,6 +670,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.23.0"
     "@babel/runtime": "npm:^7.23.0"
+    "@netlify/plugin-nextjs": "npm:^5.14.3"
     "@types/node": "npm:^24.9.1"
     "@types/react": "npm:^19.2.2"
     "@types/react-dom": "npm:^17.0.2"
