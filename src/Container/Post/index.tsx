@@ -1,9 +1,11 @@
+import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 import { Heading } from '../../components/Heading';
 import { MainContainer } from '../../components/MainContainer';
 import { PostContainer } from '../../components/PostContainer';
 import { PostCover } from '../../components/PostCover';
 import { PostDetails } from '../../components/PostDetails';
+import { Comments } from '../../Comments';
 
 import { PostData } from '../../domain/posts/post';
 import { Container } from './styles';
@@ -32,6 +34,8 @@ export const Post = ({ post }: PostProps) => {
         />
         <PostContainer content={post.content} />
       </MainContainer>
+      <Comments slug={post.slug} title={post.title} />
+      <Footer />
     </>
   );
 };
