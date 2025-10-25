@@ -27,5 +27,8 @@
     "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9.38.0",
     "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
