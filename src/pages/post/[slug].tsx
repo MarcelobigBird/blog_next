@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { countAllPosts } from '../../data/posts/count-all-posts'; // Mudança aqui
-import { getAllPosts } from '../../data/posts/get-all-posts'; // Mudança aqui
+import { countAllPosts } from '../../data/posts/count-all-posts';
+import { getAllPosts } from '../../data/posts/get-all-posts';
 import { PostData } from '../../domain/posts/post';
-
 import { Post } from '../../Container/Post';
 import { getPost } from '../../data/posts/getPost';
 
@@ -11,14 +10,21 @@ export type DynamicPostProps = {
 };
 
 const DynamicPost = ({ post }: DynamicPostProps) => {
-  return <Post post={post} />;
+  return (
+    <Post
+      title={post.title}
+      slug={post.slug}
+      cover={post.cover} // Note: a função getCoverUrl dentro do Post pode precisar de uma string, mas post.cover pode ser um objeto ou array. Talvez seja melhor passar a string da URL ou ajustar o componente Post para receber o cover no formato que ele espera.
+      post={post}
+    />
+  );
 };
 
 export default DynamicPost;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPosts = await countAllPosts();
-  const posts = await getAllPosts(`pagination[limit]=${numberOfPosts}`); // Mudança aqui
+  const posts = await getAllPosts(`pagination[limit]=${numberOfPosts}`);
 
   return {
     paths: posts.map((post) => {

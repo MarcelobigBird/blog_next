@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import { Container } from './styles';
 
 export type HeadingProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export const Heading = ({ children }: HeadingProps) => {

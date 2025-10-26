@@ -6,5 +6,14 @@ export type PostCoverProps = {
 };
 
 export const PostCover = ({ coverUrl, alt }: PostCoverProps) => {
-  return <Container src={coverUrl} alt={alt}></Container>;
+  console.log('PostCover - coverUrl:', coverUrl);
+  if (!coverUrl) {
+    return null;
+  }
+
+  return (
+    <Container>
+      <img src={coverUrl} alt={alt} />
+    </Container>
+  );
 };

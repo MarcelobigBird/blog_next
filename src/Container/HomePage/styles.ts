@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
   display: grid;
@@ -6,3 +7,12 @@ export const Container = styled.div`
   gap: 3rem;
 
 `;
+
+export const Category = styled.div`
+  text-align: center;
+  font-size: ${({ theme }) => theme.font.sizes.large};
+  font-weight: bold;
+  padding: ${({ theme }) => theme.spacings.medium} 0;
+
+`;
+

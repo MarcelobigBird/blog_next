@@ -2,9 +2,12 @@ import Link from 'next/link';
 import { Container, PostCardCover, PostCardHeading } from './styles';
 
 export type PostCardProps = {
+  cover?: string;
   slug: string;
   title: string;
-  cover: string;
+  author: string; // ← deve ser string
+  date: string;
+  category?: string;
 };
 export const PostCard = ({ slug, title, cover }: PostCardProps) => {
   return (
